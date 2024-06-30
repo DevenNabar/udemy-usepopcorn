@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 
 const containerStyle = {
@@ -9,7 +9,6 @@ const containerStyle = {
 
 const starContainerStyle = {
   display: "flex",
-  gap: "4px",
 };
 
 StarRating.propTypes = {
@@ -45,6 +44,7 @@ export default function StarRating({
     color,
     fontSize: `${size / 1.5}px`,
   };
+
   return (
     <div style={containerStyle} className={className}>
       <div style={starContainerStyle}>
@@ -76,6 +76,7 @@ function Star({ onRate, full, onHoverIn, onHoverOut, color, size }) {
     display: "block",
     cursor: "pointer",
   };
+
   return (
     <span
       role="button"
